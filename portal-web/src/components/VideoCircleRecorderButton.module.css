@@ -1,0 +1,84 @@
+.trigger {
+  flex-shrink: 0;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: none;
+  background: transparent;
+  color: var(--nps-text-muted);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.trigger:hover:not(:disabled) {
+  background: var(--nps-bg);
+  color: var(--nps-text);
+}
+
+.trigger:disabled {
+  opacity: 0.5;
+  cursor: default;
+}
+
+.recording {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex: 1;
+  padding: 0 8px;
+}
+
+.preview {
+  position: absolute;
+  right: 0;
+  bottom: 100%;
+  margin-bottom: 10px;
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #d64545;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
+  transform: scaleX(-1);
+}
+
+.indicator {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13px;
+  color: var(--nps-text-muted);
+}
+
+.dot {
+  color: #d64545;
+  fill: #d64545;
+}
+
+.cancel,
+.confirm {
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  display: flex;
+  padding: 6px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.cancel {
+  color: #d64545;
+}
+
+.confirm {
+  color: var(--nps-primary);
+}
+
+.cancel:hover,
+.confirm:hover {
+  background: var(--nps-bg);
+}

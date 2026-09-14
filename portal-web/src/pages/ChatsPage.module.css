@@ -1,0 +1,213 @@
+.layout {
+  display: flex;
+  height: 100%;
+  min-height: 0;
+}
+
+.list {
+  width: 320px;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  border-right: 1px solid var(--nps-border);
+  background: var(--nps-surface);
+  min-height: 0;
+}
+
+.listHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 16px;
+  font-weight: 600;
+  font-size: 15px;
+  flex-shrink: 0;
+}
+
+.headerButtons {
+  display: flex;
+  gap: 4px;
+}
+
+.newChatButton {
+  border: none;
+  background: transparent;
+  color: var(--nps-primary);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  padding: 4px;
+  border-radius: 50%;
+}
+
+.newChatButton:hover {
+  background: var(--nps-bg);
+}
+
+.groupAvatar {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: var(--nps-primary);
+  color: #fff;
+  font-size: 22px;
+  line-height: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.newChatForm {
+  display: flex;
+  gap: 6px;
+  padding: 0 12px 10px;
+  flex-shrink: 0;
+}
+
+.newChatInput {
+  flex: 1;
+  min-width: 0;
+  border: 1px solid var(--nps-border);
+  border-radius: 8px;
+  padding: 6px 8px;
+  font-size: 13px;
+  background: var(--nps-bg);
+  color: var(--nps-text);
+}
+
+.errorNote {
+  margin: 0 12px 10px;
+  font-size: 12px;
+  color: #d64545;
+  flex-shrink: 0;
+}
+
+.rooms {
+  flex: 1;
+  min-height: 0;
+  overflow-y: auto;
+}
+
+.empty {
+  padding: 24px 16px;
+  color: var(--nps-text-muted);
+  font-size: 13px;
+  text-align: center;
+}
+
+.roomItem {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  padding: 10px 16px;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  text-align: left;
+  position: relative;
+}
+
+.roomItem:hover {
+  background: var(--nps-bg);
+}
+
+.roomItemActive {
+  background: var(--nps-bg);
+}
+
+.roomInfo {
+  min-width: 0;
+  width: 170px;
+}
+
+.roomName {
+  font-size: 14px;
+  font-weight: 500;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.roomPreview {
+  font-size: 12px;
+  color: var(--nps-text-muted);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.avatarWrapper {
+  position: relative;
+  flex-shrink: 0;
+}
+
+.unreadBadge {
+  position: absolute;
+  bottom: -2px;
+  right: -2px;
+  min-width: 18px;
+  height: 18px;
+  padding: 0 4px;
+  border-radius: 9px;
+  border: 2px solid var(--nps-surface);
+  background: var(--nps-primary);
+  color: #fff;
+  font-size: 11px;
+  font-weight: 600;
+  line-height: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.scheduledButton {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  gap: 3px;
+  border: none;
+  background: var(--nps-bg);
+  color: var(--nps-primary);
+  cursor: pointer;
+  padding: 4px 7px;
+  border-radius: 12px;
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.scheduledButton:hover {
+  background: var(--nps-border);
+}
+
+.deleteChat {
+  flex-shrink: 0;
+  border: none;
+  background: transparent;
+  color: var(--nps-text-muted);
+  cursor: pointer;
+  display: flex;
+  padding: 6px;
+  border-radius: 50%;
+}
+
+.deleteChat:hover {
+  background: var(--nps-bg);
+  color: #d64545;
+}
+
+.windowArea {
+  flex: 1;
+  min-width: 0;
+  min-height: 0;
+}
+
+.centered {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--nps-text-muted);
+  font-size: 14px;
+}

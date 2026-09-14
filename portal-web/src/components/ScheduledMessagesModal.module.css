@@ -1,0 +1,114 @@
+.wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  max-height: 200px;
+  overflow-y: auto;
+  border: 1px solid var(--nps-border);
+  border-radius: 8px;
+  padding: 8px;
+}
+
+.item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 4px;
+}
+
+.itemInfo {
+  min-width: 0;
+  flex: 1;
+}
+
+.itemTime {
+  font-size: 12px;
+  color: var(--nps-primary);
+  font-weight: 600;
+}
+
+.itemBody {
+  font-size: 13px;
+  color: var(--nps-text);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.cancelButton {
+  flex-shrink: 0;
+  border: none;
+  background: transparent;
+  color: #d64545;
+  cursor: pointer;
+  display: flex;
+  padding: 6px;
+  border-radius: 50%;
+}
+
+.cancelButton:hover {
+  background: var(--nps-bg);
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.label {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  font-size: 12px;
+  color: var(--nps-text-muted);
+}
+
+.input,
+.textarea {
+  font: inherit;
+  border: 1px solid var(--nps-border);
+  border-radius: 8px;
+  padding: 8px 10px;
+  background: var(--nps-bg);
+  color: var(--nps-text);
+}
+
+.textareaWrapper {
+  position: relative;
+}
+
+.textarea {
+  width: 100%;
+  resize: vertical;
+}
+
+.error {
+  font-size: 12px;
+  color: #d64545;
+}
+
+.submit {
+  border: none;
+  border-radius: 8px;
+  padding: 10px;
+  background: var(--nps-primary);
+  color: #fff;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.submit:hover:not(:disabled) {
+  background: var(--nps-primary-hover);
+}
+
+.submit:disabled {
+  opacity: 0.6;
+  cursor: default;
+}

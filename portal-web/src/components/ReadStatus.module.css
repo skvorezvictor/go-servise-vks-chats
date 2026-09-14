@@ -1,0 +1,22 @@
+.sent {
+  opacity: 0.7;
+}
+
+.read {
+  color: #7cd0ff;
+}
+
+.groupStatus {
+  border: none;
+  background: transparent;
+  color: inherit;
+  opacity: 0.75;
+  font-size: 10px;
+  cursor: pointer;
+  padding: 0;
+  text-decoration: underline;
+}
+
+.groupStatus:hover {
+  opacity: 1;
+}

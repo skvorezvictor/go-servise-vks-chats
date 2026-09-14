@@ -1,0 +1,11 @@
+[Unit]
+Description=oauth2-proxy (Keycloak gate for go.example.ru /moderator/)
+After=network.target
+
+[Service]
+ExecStart=/opt/oauth2-proxy-go/oauth2-proxy --config=/etc/oauth2-proxy/oauth2-proxy-go.cfg
+Restart=on-failure
+DynamicUser=true
+
+[Install]
+WantedBy=multi-user.target

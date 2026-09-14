@@ -1,0 +1,11 @@
+interfaceConfig.APP_NAME = 'Компания';
+interfaceConfig.NATIVE_APP_NAME = 'Компания';
+interfaceConfig.PROVIDER_NAME = 'Компания';
+interfaceConfig.JITSI_WATERMARK_LINK = 'https://example.ru';
+interfaceConfig.DEFAULT_LOGO_URL = 'https://go.example.ru/logo.svg';
+interfaceConfig.SHOW_JITSI_WATERMARK = true;
+interfaceConfig.SHOW_WATERMARK_FOR_GUESTS = true;
+interfaceConfig.SHOW_POWERED_BY = false;
+interfaceConfig.MOBILE_APP_PROMO = false;
+interfaceConfig.DEFAULT_WELCOME_PAGE_LOGO_URL = "https://go.example.ru/logo.svg";
+interfaceConfig.DISPLAY_WELCOME_FOOTER = false;

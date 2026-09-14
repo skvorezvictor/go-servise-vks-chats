@@ -1,0 +1,13 @@
+{
+  "logoImageUrl": "https://go.example.ru/logo.svg",
+  "logoClickUrl": "https://example.ru",
+  "backgroundColor": "#08131A",
+  "customTheme": {
+    "palette": {
+      "action01": "#015689",
+      "hover01": "#0570a8",
+      "active01": "#013f66",
+      "focus01": "#015689"
+    }
+  }
+}

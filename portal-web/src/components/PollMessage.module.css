@@ -1,0 +1,61 @@
+.poll {
+  min-width: 220px;
+}
+
+.question {
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.options {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.option {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 8px;
+  padding: 6px 10px;
+  background: rgba(255, 255, 255, 0.08);
+  color: inherit;
+  cursor: pointer;
+  overflow: hidden;
+  text-align: left;
+}
+
+.optionVoted {
+  border-color: rgba(255, 255, 255, 0.7);
+}
+
+.optionBar {
+  position: absolute;
+  inset: 0;
+  background: rgba(255, 255, 255, 0.15);
+  z-index: 0;
+  transition: width 0.2s ease;
+}
+
+.optionLabel,
+.optionCount {
+  position: relative;
+  z-index: 1;
+  font-size: 13px;
+}
+
+.optionCount {
+  flex-shrink: 0;
+  opacity: 0.85;
+}
+
+.total {
+  margin-top: 6px;
+  font-size: 11px;
+  opacity: 0.75;
+}

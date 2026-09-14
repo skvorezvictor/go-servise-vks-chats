@@ -1,0 +1,16 @@
+[Unit]
+Description=jitsi JWT minter for go.example.ru (issues moderator JWT after oauth2-proxy auth)
+After=network.target
+
+[Service]
+Type=simple
+EnvironmentFile=/opt/jwt-minter/.env
+ExecStart=/opt/node-bin/node /opt/jwt-minter/server.mjs
+Restart=on-failure
+User=nobody
+Group=nogroup
+NoNewPrivileges=true
+ProtectSystem=strict
+
+[Install]
+WantedBy=multi-user.target

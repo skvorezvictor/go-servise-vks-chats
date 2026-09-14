@@ -1,0 +1,35 @@
+.text {
+  margin: 0 0 16px;
+  font-size: 14px;
+  color: var(--nps-text);
+}
+
+.actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+}
+
+.cancel {
+  border: 1px solid var(--nps-border);
+  border-radius: 8px;
+  padding: 8px 14px;
+  background: transparent;
+  color: var(--nps-text);
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.confirm {
+  border: none;
+  border-radius: 8px;
+  padding: 8px 14px;
+  background: #d64545;
+  color: #fff;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.confirm:hover {
+  background: #c23d3d;
+}

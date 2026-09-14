@@ -1,0 +1,20 @@
+provider = "oidc"
+oidc_issuer_url = "https://idp.example.ru/realms/CORP"
+client_id = "jitsi"
+client_secret = "<REDACTED>"
+redirect_url = "https://go.example.ru/oauth2/callback"
+email_domains = [ "*" ]
+cookie_name = "_oauth2_proxy_go"
+cookie_secret = "<REDACTED>"
+cookie_secure = true
+http_address = "127.0.0.1:4181"
+upstreams = [ "http://127.0.0.1:3301/moderator/", "http://127.0.0.1:3303/app/" ]
+insecure_oidc_allow_unverified_email = true
+reverse_proxy = true
+skip_provider_button = true
+pass_user_headers = true
+pass_access_token = true
+set_xauthrequest = true
+
+scope = "openid profile email"
+pass_authorization_header = true

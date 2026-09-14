@@ -1,0 +1,6 @@
+*.env
+*.bak
+*.bak.*
+*.bak[0-9]
+node_modules/
+dist/

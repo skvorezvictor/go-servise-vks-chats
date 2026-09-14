@@ -1,0 +1,167 @@
+.rowOwn,
+.rowIncoming {
+  display: flex;
+  margin: 2px 12px;
+}
+
+.rowOwn {
+  justify-content: flex-end;
+}
+
+.rowIncoming {
+  justify-content: flex-start;
+}
+
+.bubbleOwn,
+.bubbleIncoming {
+  position: relative;
+  max-width: min(70%, 560px);
+  padding: 8px 12px;
+  border-radius: 14px;
+  word-break: break-word;
+}
+
+.bubbleOwn {
+  background: var(--nps-bubble-out);
+  color: #fff;
+  border-bottom-right-radius: 4px;
+}
+
+.bubbleIncoming {
+  background: var(--nps-bubble-in);
+  color: var(--nps-text);
+  border-bottom-left-radius: 4px;
+}
+
+.senderName {
+  font-size: 12px;
+  font-weight: 600;
+  margin-bottom: 2px;
+  opacity: 0.85;
+}
+
+.text {
+  white-space: pre-wrap;
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+.time {
+  font-size: 10px;
+  opacity: 0.7;
+  text-align: right;
+  margin-top: 2px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 4px;
+}
+
+.readStatus {
+  display: flex;
+  align-items: center;
+}
+
+.editedMark {
+  font-style: italic;
+}
+
+.actions {
+  position: absolute;
+  top: -14px;
+  right: 4px;
+  display: none;
+  gap: 4px;
+  background: var(--nps-surface);
+  border: 1px solid var(--nps-border);
+  border-radius: 999px;
+  padding: 3px 6px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.15);
+}
+
+.bubbleOwn:hover .actions,
+.bubbleIncoming:hover .actions {
+  display: flex;
+}
+
+.actions button {
+  border: none;
+  background: transparent;
+  color: var(--nps-text-muted);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  padding: 2px;
+}
+
+.actions button:hover {
+  color: var(--nps-text);
+}
+
+.emojiWrapper {
+  position: relative;
+  display: flex;
+}
+
+.replyQuote {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+  width: 100%;
+  text-align: left;
+  border: none;
+  border-left: 2px solid currentColor;
+  background: rgba(127, 127, 127, 0.15);
+  border-radius: 4px;
+  padding: 3px 8px;
+  margin-bottom: 4px;
+  cursor: pointer;
+  color: inherit;
+}
+
+.replyQuoteSender {
+  font-size: 11px;
+  font-weight: 600;
+  opacity: 0.9;
+}
+
+.replyQuoteText {
+  font-size: 12px;
+  opacity: 0.75;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.editArea {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.editInput {
+  resize: none;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  border-radius: 8px;
+  padding: 6px 8px;
+  font: inherit;
+  font-size: 14px;
+  background: rgba(255, 255, 255, 0.12);
+  color: inherit;
+}
+
+.editActions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+  font-size: 12px;
+}
+
+.editActions button {
+  border: none;
+  background: transparent;
+  color: inherit;
+  opacity: 0.85;
+  cursor: pointer;
+  text-decoration: underline;
+}

@@ -1,0 +1,159 @@
+.wrapper {
+  flex-shrink: 0;
+  border-top: 1px solid var(--nps-border);
+  background: var(--nps-surface);
+}
+
+.progressTrack {
+  height: 3px;
+  background: var(--nps-border);
+}
+
+.progressFill {
+  height: 100%;
+  background: var(--nps-primary);
+  transition: width 0.2s ease;
+}
+
+.attachError {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  padding: 6px 12px;
+  font-size: 12px;
+  color: #d64545;
+  background: var(--nps-bg);
+}
+
+.attachError button {
+  border: none;
+  background: transparent;
+  color: inherit;
+  cursor: pointer;
+  display: flex;
+}
+
+.replyBanner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  padding: 6px 12px;
+  border-bottom: 1px solid var(--nps-border);
+  background: var(--nps-bg);
+}
+
+.replyText {
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  border-left: 2px solid var(--nps-primary);
+  padding-left: 8px;
+}
+
+.replySender {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--nps-primary);
+}
+
+.replySnippet {
+  font-size: 12px;
+  color: var(--nps-text-muted);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.replyCancel {
+  border: none;
+  background: transparent;
+  color: var(--nps-text-muted);
+  cursor: pointer;
+  display: flex;
+  flex-shrink: 0;
+}
+
+.composer {
+  display: flex;
+  align-items: flex-end;
+  gap: 4px;
+  padding: 8px 12px;
+}
+
+.iconButton {
+  flex-shrink: 0;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: none;
+  background: transparent;
+  color: var(--nps-text-muted);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.iconButton:hover:not(:disabled) {
+  background: var(--nps-bg);
+  color: var(--nps-text);
+}
+
+.iconButton:disabled {
+  opacity: 0.5;
+  cursor: default;
+}
+
+.inputWrapper {
+  position: relative;
+  flex: 1;
+  min-width: 0;
+}
+
+.input {
+  width: 100%;
+  resize: none;
+  max-height: 140px;
+  border: 1px solid var(--nps-border);
+  border-radius: 10px;
+  padding: 8px 12px;
+  font: inherit;
+  font-size: 14px;
+  background: var(--nps-bg);
+  color: var(--nps-text);
+}
+
+.input:focus {
+  outline: none;
+  border-color: var(--nps-primary);
+}
+
+.emojiWrapper {
+  position: relative;
+  flex-shrink: 0;
+}
+
+.send {
+  flex-shrink: 0;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: none;
+  background: var(--nps-primary);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.send:disabled {
+  background: var(--nps-border);
+  cursor: default;
+}
+
+.send:not(:disabled):hover {
+  background: var(--nps-primary-hover);
+}

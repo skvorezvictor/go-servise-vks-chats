@@ -1,0 +1,30 @@
+.linkButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  margin-top: 10px;
+  border: 1px solid var(--nps-border);
+  border-radius: 8px;
+  padding: 9px 12px;
+  background: transparent;
+  color: var(--nps-text);
+  font-size: 13px;
+  cursor: pointer;
+}
+
+.linkButton:hover:not(:disabled) {
+  background: var(--nps-bg);
+}
+
+.linkButton:disabled {
+  opacity: 0.6;
+  cursor: default;
+}
+
+.hint {
+  margin-top: 6px;
+  font-size: 11px;
+  color: var(--nps-text-muted);
+  line-height: 1.4;
+}

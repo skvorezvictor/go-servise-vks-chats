@@ -1,0 +1,95 @@
+.wrapper {
+  position: relative;
+}
+
+.popover {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  margin-top: 6px;
+  z-index: 10;
+  width: 260px;
+  max-width: calc(100vw - 24px);
+  background: var(--nps-surface);
+  border: 1px solid var(--nps-border);
+  border-radius: 10px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+}
+
+.shareRow {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 10px;
+  font-size: 12px;
+  color: var(--nps-text-muted);
+  border-bottom: 1px solid var(--nps-border);
+  cursor: pointer;
+}
+
+.list {
+  max-height: 220px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  padding: 6px;
+  border-bottom: 1px solid var(--nps-border);
+}
+
+.item {
+  border: none;
+  background: transparent;
+  color: var(--nps-text);
+  text-align: left;
+  padding: 8px 10px;
+  border-radius: 6px;
+  font-size: 13px;
+  cursor: pointer;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.item:hover {
+  background: var(--nps-bg);
+}
+
+.newRow {
+  display: flex;
+  gap: 6px;
+  padding: 8px;
+}
+
+.input {
+  flex: 1;
+  min-width: 0;
+  border: 1px solid var(--nps-border);
+  border-radius: 8px;
+  padding: 6px 8px;
+  font-size: 13px;
+  background: var(--nps-bg);
+  color: var(--nps-text);
+}
+
+.addButton {
+  flex-shrink: 0;
+  border: none;
+  border-radius: 8px;
+  padding: 0 10px;
+  background: var(--nps-primary);
+  color: #fff;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.addButton:disabled {
+  opacity: 0.5;
+  cursor: default;
+}
+
+.addButton:hover:not(:disabled) {
+  background: var(--nps-primary-hover);
+}

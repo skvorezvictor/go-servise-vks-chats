@@ -1,0 +1,17 @@
+[Unit]
+Description=Matrix Keycloak-session bridge for go.example.ru portal (mints Matrix login after oauth2-proxy auth)
+After=network.target
+
+[Service]
+Type=simple
+EnvironmentFile=/opt/matrix-auth-bridge/.env
+ExecStart=/opt/node-bin/node /opt/matrix-auth-bridge/server.mjs
+Restart=on-failure
+User=nobody
+Group=nogroup
+NoNewPrivileges=true
+ProtectSystem=strict
+ReadWritePaths=/var/lib/matrix-auth-bridge
+
+[Install]
+WantedBy=multi-user.target

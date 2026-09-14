@@ -1,0 +1,18 @@
+.popover {
+  position: absolute;
+  bottom: 100%;
+  z-index: 10;
+  margin-bottom: 6px;
+  max-width: calc(100vw - 24px);
+}
+
+.alignRight {
+  right: 0;
+}
+
+.openDown {
+  bottom: auto;
+  top: 100%;
+  margin-bottom: 0;
+  margin-top: 6px;
+}

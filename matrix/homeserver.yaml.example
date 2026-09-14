@@ -1,0 +1,61 @@
+# Configuration file for Synapse.
+#
+# This is a YAML file: see [1] for a quick introduction. Note in particular
+# that *indentation is important*: all the elements of a list or dictionary
+# should have the same indentation.
+#
+# [1] https://docs.ansible.com/ansible/latest/reference_appendices/YAMLSyntax.html
+#
+# For more information on how to configure Synapse, including a complete accounting of
+# each option, go to docs/usage/configuration/config_documentation.md or
+# https://element-hq.github.io/synapse/latest/usage/configuration/config_documentation.html
+server_name: "go.example.ru"
+pid_file: /data/homeserver.pid
+listeners:
+  - port: 8008
+    resources:
+    - compress: false
+      names:
+      - client
+    tls: false
+    type: http
+    x_forwarded: true
+database:
+  name: psycopg2
+  args:
+    user: synapse
+    password: "<REDACTED>"
+    database: synapse
+    host: postgres
+    port: 5432
+    cp_min: 5
+    cp_max: 10
+log_config: "/data/go.example.ru.log.config"
+media_store_path: /data/media_store
+registration_shared_secret: <REDACTED>
+report_stats: false
+macaroon_secret_key: <REDACTED>
+form_secret: <REDACTED>
+signing_key_path: <REDACTED>
+
+# Закрытая внутренняя система: федерация полностью выключена.
+federation_domain_whitelist: []
+allow_public_rooms_over_federation: false
+enable_registration: false
+enable_registration_without_verification: false
+url_preview_enabled: false
+max_upload_size: "100M"
+
+
+# vim:ft=yaml
+user_directory:
+  enabled: true
+  search_all_users: true
+  prefer_local_users: true
+
+# Вложения (фото/файлы) автоматически удаляются через 3 суток после отправки -
+# требование пользователя. Синапс сам по расписанию чистит локальные медиа
+# старше указанного срока (фоновая задача, отдельный cron не нужен).
+media_retention:
+  local_media_lifetime: 3d
+  remote_media_lifetime: 3d

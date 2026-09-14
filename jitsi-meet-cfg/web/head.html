@@ -1,0 +1,89 @@
+<style>
+.watermark.leftwatermark {
+    width: 220px !important;
+    height: 110px !important;
+    max-width: 280px !important;
+    max-height: 140px !important;
+}
+.watermark.leftwatermark {
+    display: none !important;
+}
+.welcome .watermark.leftwatermark {
+    display: block !important;
+}
+.welcome .header {
+    background-image: linear-gradient(135deg, #015689 0%, #08131A 100%) !important;
+}
+.header-text-title,
+.header-text-subtitle {
+    overflow-wrap: break-word !important;
+    word-break: break-word !important;
+    hyphens: auto !important;
+}
+@media (max-width: 480px) {
+    .watermark.leftwatermark {
+        width: 150px !important;
+        height: 75px !important;
+    }
+    .header-container {
+        max-width: 92vw !important;
+        padding: 0 4vw !important;
+    }
+    .header-text-title {
+        font-size: 1.7rem !important;
+        line-height: 2.1rem !important;
+    }
+    .header-text-subtitle {
+        font-size: 1rem !important;
+        line-height: 1.3rem !important;
+    }
+}
+</style>
+<script>
+(function () {
+  // Компоненты go.example.ru (jicofo/prosody) исторически некорректно
+  // обрабатывают кириллицу в имени XMPP-комнаты - приводит к "битому"
+  // названию у собеседников и отказу входа. Своего конфига валидации имени
+  // комнаты в Jitsi нет, поэтому вешаем предупреждение прямо на нативное
+  // поле welcome-страницы через встроенный HTML5 setCustomValidity -
+  // это блокирует отправку формы без единой правки React-кода Jitsi.
+  var MESSAGE = 'Название конференции должно быть латиницей (без кириллицы) - иначе у собеседников оно отобразится с ошибками.';
+  var CYRILLIC = /[а-яёА-ЯЁ]/;
+
+  function wire(input) {
+    if (!input || input.dataset.cyrillicGuard) return;
+    input.dataset.cyrillicGuard = '1';
+    var check = function () {
+      input.setCustomValidity(CYRILLIC.test(input.value) ? MESSAGE : '');
+    };
+    input.addEventListener('input', check);
+    check();
+  }
+
+  function scan() {
+    wire(document.getElementById('enter_room_field'));
+  }
+
+  new MutationObserver(scan).observe(document.documentElement, { childList: true, subtree: true });
+  scan();
+})();
+</script>
+<script>
+(function () {
+  // Стандартный "Thank you for using {app}" на экране после выхода из
+  // звонка заменяем на свой текст - тексту брендинга не хватало собственных
+  // слов, а трогать переводы Jitsi (main-ru.json) решили не трогать (легко
+  // потерять при обновлении образа), поэтому просто перезаписываем DOM.
+  var CUSTOM_THANKS = 'Ждём вас снова в сервисе ВКС компании.';
+
+  function apply() {
+    var el = document.getElementById('thanksMessage');
+    if (el && el.textContent !== CUSTOM_THANKS) {
+      el.textContent = CUSTOM_THANKS;
+    }
+  }
+
+  new MutationObserver(apply).observe(document.documentElement, { childList: true, subtree: true, characterData: true });
+  apply();
+})();
+</script>

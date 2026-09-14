@@ -1,0 +1,32 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  text-align: center;
+}
+
+.name {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.about {
+  font-size: 13px;
+  color: var(--nps-text-muted);
+}
+
+.writeButton {
+  margin-top: 6px;
+  border: none;
+  border-radius: 8px;
+  padding: 8px 20px;
+  background: var(--nps-primary);
+  color: #fff;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.writeButton:hover {
+  background: var(--nps-primary-hover);
+}

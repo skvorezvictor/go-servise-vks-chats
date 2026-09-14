@@ -1,0 +1,43 @@
+.bar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+  margin-top: 4px;
+}
+
+.pill {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  border: 1px solid var(--nps-border);
+  border-radius: 999px;
+  padding: 1px 7px;
+  font-size: 12px;
+  background: var(--nps-surface);
+  color: var(--nps-text);
+  cursor: pointer;
+}
+
+.pillMine {
+  border-color: var(--nps-primary);
+  background: color-mix(in srgb, var(--nps-primary) 15%, var(--nps-surface));
+}
+
+.addWrapper {
+  position: relative;
+}
+
+.add {
+  border: 1px solid var(--nps-border);
+  border-radius: 999px;
+  padding: 1px 6px;
+  background: var(--nps-surface);
+  color: var(--nps-text-muted);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+.add:hover {
+  color: var(--nps-text);
+}

@@ -1,0 +1,30 @@
+:root {
+  --nps-bg: #f4f6f8;
+  --nps-surface: #ffffff;
+  --nps-border: #e1e6ea;
+  --nps-text: #101418;
+  --nps-text-muted: #667085;
+  --nps-bubble-in: #eef1f4;
+  --nps-bubble-out: #015689;
+  --nps-watermark: rgba(1, 86, 137, 0.06);
+  --nps-primary: #015689;
+  --nps-primary-hover: #0570a8;
+  --nps-primary-active: #013f66;
+  --nps-dark: #08131a;
+}
+
+:root[data-theme='dark'] {
+  --nps-bg: #0b0f13;
+  --nps-surface: #131a20;
+  --nps-border: #232b32;
+  --nps-text: #e6e9ec;
+  --nps-text-muted: #8a94a0;
+  --nps-bubble-in: #1c2530;
+  /* Исходящий пузырь остаётся фирменным синим в обеих темах. */
+  --nps-bubble-out: #015689;
+  --nps-watermark: rgba(255, 255, 255, 0.04);
+  --nps-primary: #0570a8;
+  --nps-primary-hover: #1a86c2;
+  --nps-primary-active: #015689;
+  --nps-dark: #08131a;
+}

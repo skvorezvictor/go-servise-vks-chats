@@ -1,0 +1,50 @@
+.rail {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  width: 72px;
+  flex-shrink: 0;
+  background: var(--nps-surface);
+  border-right: 1px solid var(--nps-border);
+  padding: 12px 8px;
+}
+
+.item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  padding: 10px 4px;
+  border-radius: 10px;
+  color: var(--nps-text-muted);
+  text-decoration: none;
+  font-size: 11px;
+}
+
+.item:hover {
+  background: var(--nps-bg);
+}
+
+.active {
+  color: var(--nps-primary);
+  background: var(--nps-bg);
+}
+
+.startCall {
+  margin-top: auto;
+  align-self: center;
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  border-radius: 50%;
+  background: var(--nps-primary);
+  color: #fff;
+  cursor: pointer;
+}
+
+.startCall:hover {
+  background: var(--nps-primary-hover);
+}

@@ -1,0 +1,19 @@
+[Unit]
+Description=Static SPA server for go.example.ru /app/ portal (chats/contacts)
+After=network.target
+
+[Service]
+Type=simple
+Environment=PORT=3303
+Environment=HOST=127.0.0.1
+Environment=DIST_DIR=/opt/portal-web/dist
+Environment=MATRIX_AUTH_BRIDGE_URL=http://127.0.0.1:3302
+ExecStart=/opt/node-bin/node /opt/portal-web/server.mjs
+Restart=on-failure
+User=nobody
+Group=nogroup
+NoNewPrivileges=true
+ProtectSystem=strict
+
+[Install]
+WantedBy=multi-user.target

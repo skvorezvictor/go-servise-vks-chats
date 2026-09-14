@@ -1,0 +1,29 @@
+.list {
+  position: absolute;
+  bottom: 100%;
+  left: 0;
+  right: 0;
+  margin-bottom: 4px;
+  background: var(--nps-surface);
+  border: 1px solid var(--nps-border);
+  border-radius: 10px;
+  max-height: 180px;
+  overflow-y: auto;
+  box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.12);
+}
+
+.item {
+  display: block;
+  width: 100%;
+  text-align: left;
+  padding: 8px 12px;
+  border: none;
+  background: transparent;
+  color: var(--nps-text);
+  font-size: 13px;
+  cursor: pointer;
+}
+
+.item:hover {
+  background: var(--nps-bg);
+}

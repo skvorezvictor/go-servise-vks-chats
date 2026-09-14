@@ -1,0 +1,44 @@
+* {
+  box-sizing: border-box;
+}
+
+/*
+ * У <button> в UA-стилях свой color (system "buttontext", не наследуется
+ * от родителя), любая кнопка-строка (список чатов/контактов/звонков) без
+ * явного color оставалась чёрным текстом на тёмной теме, хотя фон уже был
+ * тёмным. Сбрасываем на inherit глобально, а не по одной кнопке.
+ */
+button {
+  color: inherit;
+  font: inherit;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+  margin: 0;
+  overflow: hidden;
+}
+
+body {
+  font-family: system-ui, 'Segoe UI', Roboto, sans-serif;
+  color-scheme: light dark;
+  background: var(--nps-bg);
+  color: var(--nps-text);
+}
+
+/*
+ * Полосы прокрутки нигде не должны быть видны, но прокрутка колесом/тачем
+ * внутри контейнеров (лента сообщений, список чатов) остаётся рабочей.
+ * Класс вешается точечно на конкретные overflow-контейнеры, а не глобально
+ * на *, чтобы не тащить это правило туда, где overflow вообще не нужен.
+ */
+.no-scrollbar {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}

@@ -1,0 +1,13 @@
+.stamp {
+  position: fixed;
+  right: 10px;
+  bottom: 8px;
+  z-index: 5;
+  border: none;
+  background: transparent;
+  cursor: default;
+  font-size: 11px;
+  color: var(--nps-text-muted);
+  padding: 2px 6px;
+  white-space: nowrap;
+}
